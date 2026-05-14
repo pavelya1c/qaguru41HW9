@@ -9,14 +9,14 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
-public class AllureHomeWork extends TestBase {
+public class AllureHomeWork {
 
     WebStepPage webStepPage = new WebStepPage();
     private static final String REPOSITORY = "d2iq-archive/marathon";
     private static final int ISSUE = 7276;
 
     @Test
-    public void allureHomeWork() {
+    public void allureHomeWork () {
             open("https://github.com");
             $(".search-input-container").click();
             $("#query-builder-test").setValue(REPOSITORY)
