@@ -8,13 +8,16 @@ permissions:
 
 jobs:
   test:
+    #Где запускаем
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
+        #Выкачиваем репозиторий
         uses: actions/checkout@v3
 
       - name: Setup Java
+        #Настраиваем Java
         uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
@@ -24,11 +27,13 @@ jobs:
         uses: Xotabu4/selenoid-github-action@v2
 
       - name: Run tests
+        # запускаем тесты
         run: ./gradlew clean test -Dselenide.remote=http://localhost:4444/wd/hub
 
       - name: Checkout gh-pages branch
         if: always()
         continue-on-error: true
+        # скачиваем историю тестов
         uses: actions/checkout@v3
         with:
           ref: gh-pages
@@ -36,6 +41,7 @@ jobs:
 
       - name: Generate Allure report
         if: always()
+        # генерируем отчет
         uses: simple-elf/allure-report-action@master
         with:
           gh_pages: gh-pages
@@ -45,6 +51,7 @@ jobs:
 
       - name: Deploy report to GitHub Pages
         if: always()
+        # публикуем отчет
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
