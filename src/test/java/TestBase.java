@@ -1,3 +1,5 @@
+import com.codeborne.selenide.Configuration;
+
 public class TestBase {
 
     @BeforeAll
