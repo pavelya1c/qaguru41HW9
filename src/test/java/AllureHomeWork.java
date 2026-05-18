@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
-public class AllureHomeWork {
+public class AllureHomeWork extends TestBase {
 
     WebStepPage webStepPage = new WebStepPage();
     private static final String REPOSITORY = "d2iq-archive/marathon";
