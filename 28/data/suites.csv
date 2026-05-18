@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","10890","Поиск репозитория d2iq-archive/marathon AnnotatedStep","","Mon May 18 08:14:20 UTC 2026","passed","Mon May 18 08:14:30 UTC 2026","","AllureHomeWork","AllureHomeWork","allureHomeWorkAnnotatedStep"
+"","8996","Поиск репозитория d2iq-archive/marathon LambdaSteps","","Mon May 18 08:14:30 UTC 2026","passed","Mon May 18 08:14:39 UTC 2026","","AllureHomeWork","AllureHomeWork","allureHomeWorkLambdaSteps"
+"","20993","Поиск репозитория d2iq-archive/marathon","","Mon May 18 08:13:58 UTC 2026","passed","Mon May 18 08:14:19 UTC 2026","","AllureHomeWork","AllureHomeWork","allureHomeWork"
